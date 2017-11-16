@@ -15,7 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // From : https://medium.com/@Dougly/a-uiviewcontroller-and-uiviews-without-storyboard-swift-3-543096e78f2
+        //Create a new window for the window property that comes standard on the AppDelegate class. The UIWindow is where all VCs and views appear
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // Create a new instance of the main VC
+        let mainViewController = MainVC()
+        
+        // Set the initial VC to our instance of MainVC
+        
+        window?.rootViewController = mainViewController
+        
+        //Present the window
+        window?.makeKeyAndVisible()
+        
+        
         return true
     }
 
