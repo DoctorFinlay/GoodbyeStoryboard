@@ -1,0 +1,6 @@
+framework module Pods_GoodbyeStoryboard {
+  umbrella header "Pods-GoodbyeStoryboard-umbrella.h"
+
+  export *
+  module * { export * }
+}
